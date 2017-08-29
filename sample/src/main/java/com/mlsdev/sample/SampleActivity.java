@@ -1,15 +1,17 @@
 package com.mlsdev.sample;
 
-import android.support.v7.app.AppCompatActivity;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-import com.mlsdev.animatedrv.R;
+import com.mlsdev.sample.databinding.ActivitySampleBinding;
 
 public class SampleActivity extends AppCompatActivity {
+    private ActivitySampleBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sample);
     }
 }

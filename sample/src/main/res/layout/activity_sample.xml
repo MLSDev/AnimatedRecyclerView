@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.mlsdev.sample.SampleActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Hello World!" />
+<layout>
 
-</RelativeLayout>
+    <data>
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mlsdev.sample.SampleActivity">
+
+        <com.mlsdev.animatedrv.AnimatedRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:animationDuration="400"
+            app:layoutAnimation="@anim/layout_animation_from_bottom"
+            app:linearLayoutManagerOrientation="vertical"
+            app:linearLayoutManagerReverse="false"
+            app:layoutManagerType="linear" />
+
+    </RelativeLayout>
+
+</layout>
