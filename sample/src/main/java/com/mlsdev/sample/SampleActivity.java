@@ -5,16 +5,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.mlsdev.sample.databinding.ActivitySampleBinding;
+import com.mlsdev.sample.fragment.OptionsFragment;
 
 public class SampleActivity extends AppCompatActivity {
-    private ActivitySampleBinding binding;
-    private SimpleAdapter adapter = new SimpleAdapter();
+    public static final String TITLE_KEY = "title_key";
+    public static final String LAYOUT_KEY = "layout_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_sample);
-        binding.recyclerView.setAdapter(adapter);
-        binding.recyclerView.notifyDataSetChanged();
+        ActivitySampleBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_sample);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(binding.content.getId(), new OptionsFragment())
+                .commit();
+
     }
 }
