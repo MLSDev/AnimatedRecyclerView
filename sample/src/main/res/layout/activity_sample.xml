@@ -17,10 +17,11 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:animationDuration="400"
+            app:animationDuration="600"
+            app:gridLayoutManagerColumns="3"
             app:layoutAnimation="@anim/layout_animation_from_bottom"
-            app:linearLayoutManagerOrientation="vertical"
-            app:linearLayoutManagerReverse="false"
+            app:layoutManagerOrientation="vertical"
+            app:layoutManagerReverse="false"
             app:layoutManagerType="linear" />
 
     </RelativeLayout>
