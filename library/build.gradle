@@ -1,5 +1,11 @@
 apply plugin: 'com.android.library'
 
+ext {
+    PUBLISH_GROUP_ID = 'com.mlsdev.animatedrv'
+    PUBLISH_ARTIFACT_ID = 'library'
+    PUBLISH_VERSION = '1.0.0'
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -8,7 +14,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
-        versionName "0.0.1"
+        versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -34,3 +40,5 @@ dependencies {
     compile "com.android.support:recyclerview-v7:${ANDROID_SUPPORT_VERSION}"
     testCompile 'junit:junit:4.12'
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
