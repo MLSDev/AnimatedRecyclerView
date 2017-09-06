@@ -1,9 +1,29 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: "com.jfrog.bintray"
 
-ext {
-    PUBLISH_GROUP_ID = 'com.mlsdev.animatedrv'
-    PUBLISH_ARTIFACT_ID = 'library'
-    PUBLISH_VERSION = '1.0.0'
+def siteUrl = 'https://github.com/MLSDev/AnimatedRecyclerView'
+def gitUrl = 'https://github.com/MLSDev/AnimatedRecyclerView.git'
+
+version = "1.0.0"
+group = "com.mlsdev.animatedrv"
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "AnimatedRecyclerView"
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
 }
 
 android {
@@ -27,6 +47,37 @@ android {
     }
 }
 
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name 'A RecyclerView with layout animations'
+                url siteUrl
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'SerhiyPetrosyuk'
+                        name 'SerhiyPetrosyuk'
+                        email 'petrosyuk@mlsdev.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+
+                }
+            }
+        }
+    }
+}
+
 ext {
     ANDROID_SUPPORT_VERSION = '25.3.1'
 }
@@ -40,5 +91,3 @@ dependencies {
     compile "com.android.support:recyclerview-v7:${ANDROID_SUPPORT_VERSION}"
     testCompile 'junit:junit:4.12'
 }
-
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
