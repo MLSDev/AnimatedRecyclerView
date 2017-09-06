@@ -10,6 +10,7 @@ To use this library your `minSdkVersion` must be >= 16.
 In your build.gradle :
 
 ## Example
+### From the layout
 ```xml
 <com.mlsdev.animatedrv.AnimatedRecyclerView
         android:id="@+id/recycler_view"
@@ -21,6 +22,17 @@ In your build.gradle :
         app:layoutManagerReverse="false"
         app:layoutManagerType="linear" />
 ```
+### From the code
+```
+AnimatedRecyclerView recyclerView = new AnimatedRecyclerView.Builder(this)
+                .orientation(LinearLayoutManager.VERTICAL)
+                .layoutManagerType(AnimatedRecyclerView.LayoutManagerType.LINEAR)
+                .animation(R.anim.layout_animation_from_bottom)
+                .animationDuration(600)
+                .reverse(false)
+                .build();
+```
+
 ### Start animation
 - First option
 ```java
