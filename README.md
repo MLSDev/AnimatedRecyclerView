@@ -1,6 +1,9 @@
 # AnimatedRecyclerView
 A RecyclerView with layout animations
 
+## Demo
+<img src="art/demo.gif" width="32%">
+
 ## Setup
 To use this library your `minSdkVersion` must be >= 16.
 
