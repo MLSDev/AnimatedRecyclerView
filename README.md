@@ -1,3 +1,35 @@
+# AnimatedRecyclerView
+A RecyclerView with layout animations
+
+## Setup
+To use this library your `minSdkVersion` must be >= 16.
+
+In your build.gradle :
+
+## Example
+```
+<com.mlsdev.animatedrv.AnimatedRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:animationDuration="600"
+        app:layoutAnimation="@anim/layout_animation_from_bottom"
+        app:layoutManagerOrientation="vertical"
+        app:layoutManagerReverse="false"
+        app:layoutManagerType="linear" />
+```
+### Start animation
+- First option
+```
+adapter.notifyDataSetChanged();
+recyclerView.scheduleLayoutAnimation();
+```
+- Second option
+Your `RecyclerView` must be casted to the `AnimatedRecyclerView` and an adapter must be set.
+```
+recyclerView.notifyDataSetChanged();
+```
+
 ## Authors
 * [Sergey Petrosyuk](mailto:petrosyuk@mlsdev.com), MLSDev 
 
