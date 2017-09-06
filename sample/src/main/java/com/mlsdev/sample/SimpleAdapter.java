@@ -19,13 +19,13 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_item, parent, false));
+        int index = (int) (Math.random() * 3);
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_item, parent, false), index);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        int index = (int) (Math.random() * 3);
-        holder.view.setBackgroundResource(backgrounds[index]);
+        holder.view.setBackgroundResource(backgrounds[holder.backgroundIndex]);
     }
 
     @Override
@@ -35,9 +35,11 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private FrameLayout view;
+        private int backgroundIndex = 0;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(View itemView, int backgroundIndex) {
             super(itemView);
+            this.backgroundIndex = backgroundIndex;
             view = (FrameLayout) itemView.findViewById(R.id.item);
         }
     }
