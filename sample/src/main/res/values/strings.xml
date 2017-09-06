@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AnimatedRecyclerView</string>
+    <string name="btn_list_from_bottom">list from bottom</string>
+    <string name="btn_list_from_bottom_scale">list from bottom scale</string>
+    <string name="btn_grid_from_bottom">grid from bottom</string>
+    <string name="btn_grid_from_bottom_scale">grid from bottom scale</string>
+    <string name="btn_grid_from_bottom_random">grid from bottom random</string>
+    <string name="btn_grid_random_scale">grid random scale</string>
 </resources>

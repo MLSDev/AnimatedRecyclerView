@@ -6,80 +6,96 @@
 
     </data>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/logo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:context="com.mlsdev.sample.SampleActivity">
+
+                <Button
+                    android:id="@+id/btn_list_from_bottom"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_primary"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/btn_list_from_bottom"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_list_from_bottom_scale"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_primary"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/btn_list_from_bottom_scale"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_grid_from_bottom"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_primary"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/btn_grid_from_bottom"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_grid_from_bottom_scale"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_primary"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/btn_grid_from_bottom_scale"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_grid_from_bottom_random"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_primary"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/btn_grid_from_bottom_random"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_grid_random_scale"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_primary"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/btn_grid_random_scale"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
             android:padding="16dp"
-            tools:context="com.mlsdev.sample.SampleActivity">
+            android:scaleType="centerInside"
+            android:src="@drawable/mlsdev" />
 
-            <Button
-                android:id="@+id/btn_list_from_bottom"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/background"
-                android:foreground="?attr/selectableItemBackground"
-                android:text="list from bottom"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btn_list_from_bottom_scale"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/background"
-                android:foreground="?attr/selectableItemBackground"
-                android:text="list from bottom scale"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btn_grid_from_bottom"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/background"
-                android:foreground="?attr/selectableItemBackground"
-                android:text="grid from bottom"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btn_grid_from_bottom_scale"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/background"
-                android:foreground="?attr/selectableItemBackground"
-                android:text="grid from bottom scale"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btn_grid_from_bottom_random"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/background"
-                android:foreground="?attr/selectableItemBackground"
-                android:text="grid from bottom random"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btn_grid_from_bottom_random_scale"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/background"
-                android:foreground="?attr/selectableItemBackground"
-                android:text="grid from bottom random scale"
-                android:textColor="@android:color/white" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    </RelativeLayout>
 </layout>

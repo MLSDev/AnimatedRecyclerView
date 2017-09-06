@@ -28,13 +28,13 @@ public class SampleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Bundle args = getArguments();
         String title = "Sample";
-        int layout = R.layout.fragment_sample;
+        int layout = R.layout.fragment_list_from_bottom;
         if (args != null) {
             title = args.getString(SampleActivity.TITLE_KEY);
             layout = args.getInt(SampleActivity.LAYOUT_KEY);
         }
 
-        getActivity().setTitle(title);
+        ((SampleActivity) getActivity()).getSupportActionBar().setTitle(title);
 
         View view = inflater.inflate(layout, container, false);
         RecyclerView recyclerView = (AnimatedRecyclerView) view.findViewById(R.id.recycler_view);
