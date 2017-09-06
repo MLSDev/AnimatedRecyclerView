@@ -20,13 +20,13 @@ In your build.gradle :
 ```
 ### Start animation
 - First option
-```
+```java
 adapter.notifyDataSetChanged();
 recyclerView.scheduleLayoutAnimation();
 ```
 - Second option
 Your `RecyclerView` must be casted to the `AnimatedRecyclerView` and an adapter must be set.
-```
+```java
 recyclerView.notifyDataSetChanged();
 ```
 
