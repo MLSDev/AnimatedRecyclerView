@@ -1,3 +1,5 @@
+![Travis-ci](https://api.travis-ci.org/MLSDev/AnimatedRecyclerView.svg)
+
 # AnimatedRecyclerView
 A RecyclerView with layout animations
 
