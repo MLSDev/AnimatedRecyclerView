@@ -7,7 +7,7 @@ To use this library your `minSdkVersion` must be >= 16.
 In your build.gradle :
 
 ## Example
-```
+```xml
 <com.mlsdev.animatedrv.AnimatedRecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
