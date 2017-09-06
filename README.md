@@ -23,7 +23,7 @@ In your build.gradle :
         app:layoutManagerType="linear" />
 ```
 ### From the code
-```
+```java
 AnimatedRecyclerView recyclerView = new AnimatedRecyclerView.Builder(this)
                 .orientation(LinearLayoutManager.VERTICAL)
                 .layoutManagerType(AnimatedRecyclerView.LayoutManagerType.LINEAR)
