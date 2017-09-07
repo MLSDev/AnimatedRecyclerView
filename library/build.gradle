@@ -5,13 +5,19 @@ apply plugin: "com.jfrog.bintray"
 def siteUrl = 'https://github.com/MLSDev/AnimatedRecyclerView'
 def gitUrl = 'https://github.com/MLSDev/AnimatedRecyclerView.git'
 
-version = "1.0.0"
+version = "1.0.1"
 group = "com.mlsdev.animatedrv"
 
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 bintray {
+//    user = properties.getProperty("bintray.user")
+//    key = properties.getProperty("bintray.apikey")
+
     configurations = ['archives']
     pkg {
-        repo = "maven"
+        repo = "AnimatedRecyclerView"
         name = "AnimatedRecyclerView"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
@@ -28,7 +34,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
