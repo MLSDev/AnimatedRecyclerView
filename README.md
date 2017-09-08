@@ -1,4 +1,5 @@
 ![Travis-ci](https://api.travis-ci.org/MLSDev/AnimatedRecyclerView.svg)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 
 # AnimatedRecyclerView
 A RecyclerView with layout animations
