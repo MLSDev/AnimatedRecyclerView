@@ -35,7 +35,7 @@ dependencies {
         app:layoutManagerReverse="false"
         app:layoutManagerType="linear" />
 ```
-### You can create any layout animations
+#### You can create any layout animations
 ```xml
 <layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
     android:animation="@anim/item_animation_from_bottom"
