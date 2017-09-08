@@ -35,6 +35,30 @@ dependencies {
         app:layoutManagerReverse="false"
         app:layoutManagerType="linear" />
 ```
+### You can create any layout animations
+```xml
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/item_animation_from_bottom"
+    android:animationOrder="normal"
+    android:delay="15%" />
+```
+```xml
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500">
+
+    <translate
+        android:fromYDelta="50%p"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toYDelta="0" />
+
+    <alpha
+        android:fromAlpha="0"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toAlpha="1" />
+
+</set>
+```
+
 ### From the code
 ```java
 AnimatedRecyclerView recyclerView = new AnimatedRecyclerView.Builder(this)
