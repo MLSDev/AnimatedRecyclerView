@@ -10,6 +10,15 @@ A RecyclerView with layout animations
 To use this library your `minSdkVersion` must be >= 16.
 
 In your build.gradle :
+```gradle
+dependencies {
+    // Kotlin
+    implementation "com.mlsdev.animatedrv:library:1.0.1"
+    
+    // Java
+    compile "com.mlsdev.animatedrv:library:1.0.1"
+}
+```
 
 ## Example
 ### From the layout
