@@ -1,6 +1,6 @@
 ![Travis-ci](https://api.travis-ci.org/MLSDev/AnimatedRecyclerView.svg)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
-[![Download](https://api.bintray.com/packages/wasabeef/maven/recyclerview-animators/images/download.svg)](https://bintray.com/spetrosiukmlsdev/AnimatedRecyclerView/AnimatedRecyclerView/_latestVersion)
+[![Download](https://api.bintray.com/packages/spetrosiukmlsdev/AnimatedRecyclerView/AnimatedRecyclerView/images/download.svg)](https://bintray.com/spetrosiukmlsdev/AnimatedRecyclerView/AnimatedRecyclerView/_latestVersion)
 
 # AnimatedRecyclerView
 A RecyclerView with layout animations
