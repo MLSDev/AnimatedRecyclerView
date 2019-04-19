@@ -1,5 +1,5 @@
 ![Travis-ci](https://api.travis-ci.org/MLSDev/AnimatedRecyclerView.svg)
-[![License](![Hex.pm](https://img.shields.io/hexpm/l/plug.svg))](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/hexpm/l/plug.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Download](https://api.bintray.com/packages/spetrosiukmlsdev/AnimatedRecyclerView/AnimatedRecyclerView/images/download.svg)](https://bintray.com/spetrosiukmlsdev/AnimatedRecyclerView/AnimatedRecyclerView/_latestVersion)
 
 # AnimatedRecyclerView
