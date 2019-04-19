@@ -52,7 +52,7 @@ public class AnimatedRecyclerView extends RecyclerView {
         init(context, attrs);
     }
 
-    @SuppressLint("Recycle")
+    @SuppressLint({"Recycle", "WrongConstant"})
     private void init(Context context, @Nullable AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AnimatedRecyclerView, 0, 0);
 
