@@ -1,5 +1,5 @@
 ![Travis-ci](https://api.travis-ci.org/MLSDev/AnimatedRecyclerView.svg)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Download](https://api.bintray.com/packages/spetrosiukmlsdev/AnimatedRecyclerView/AnimatedRecyclerView/images/download.svg)](https://bintray.com/spetrosiukmlsdev/AnimatedRecyclerView/AnimatedRecyclerView/_latestVersion)
 
 # AnimatedRecyclerView
@@ -15,6 +15,13 @@ In your build.gradle :
 ```gradle
 dependencies {
     implementation "com.mlsdev.animatedrv:library:1.0.1"
+}
+```
+
+#### AndroidX support
+```gradle
+dependencies {
+    implementation "com.mlsdev.animatedrv:library:2.0.0"
 }
 ```
 

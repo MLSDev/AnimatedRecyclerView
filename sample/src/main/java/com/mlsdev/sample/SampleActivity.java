@@ -1,9 +1,10 @@
 package com.mlsdev.sample;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.mlsdev.sample.databinding.ActivitySampleBinding;
 import com.mlsdev.sample.fragment.OptionsFragment;

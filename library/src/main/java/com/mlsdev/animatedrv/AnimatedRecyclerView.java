@@ -3,14 +3,15 @@ package com.mlsdev.animatedrv;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.AnimRes;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+
+import androidx.annotation.AnimRes;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class AnimatedRecyclerView extends RecyclerView {
     private int orientation = LinearLayoutManager.VERTICAL;
@@ -121,7 +122,7 @@ public class AnimatedRecyclerView extends RecyclerView {
             return this;
         }
 
-        public Builder aimationController(LayoutAnimationController animationController) {
+        public Builder animationController(LayoutAnimationController animationController) {
             this.animationController = animationController;
             return this;
         }
@@ -135,9 +136,13 @@ public class AnimatedRecyclerView extends RecyclerView {
 
     }
 
-    public void notifyDataSetChanged() {
-        getAdapter().notifyDataSetChanged();
-        scheduleLayoutAnimation();
+    public void notifyDataSetChanged() throws Exception {
+        if (getAdapter() != null) {
+            getAdapter().notifyDataSetChanged();
+            scheduleLayoutAnimation();
+        } else {
+            throw new Exception("The adapter must be set");
+        }
     }
 
     public @interface LayoutManagerType {
